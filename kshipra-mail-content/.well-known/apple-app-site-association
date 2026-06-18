@@ -1,0 +1,17 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appIDs": [
+                    "7FK937P8SU.com.kshipra.ios"
+                ],
+                "components": [
+                    {
+                        "/": "*",
+                        "comment": "Matches any URLs"
+                    }
+                ]
+            }
+        ]
+    }
+}

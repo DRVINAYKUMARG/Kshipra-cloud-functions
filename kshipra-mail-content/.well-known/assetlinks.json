@@ -1,0 +1,13 @@
+﻿{
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kshipra.android",
+      "sha256_cert_fingerprints": [
+        "7A:D4:F8:27:EC:90:F6:C6:1B:74:B8:28:5E:27:1E:C3:3C:9D:A9:AF:DA:57:12:DF:92:8D:4A:8B:DC:97:78:6F",
+        "65:35:80:49:6B:A1:04:EE:AE:C5:66:B4:F3:D9:A6:4A:05:9B:A2:20:17:14:E7:0E:39:2A:51:21:9C:F5:DA:EB"
+      ]
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Approval</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content">
+        <div id="message" class="message"></div>
+
+        <!-- Session Information Box -->
+        <div class="card">
+            <div class="card-title">Session Information</div>
+            <div class="details-grid">
+                <div class="detail-group">
+                    <div class="detail-label">Date</div>
+                    <div class="detail-value" id="date">-</div>
+                </div>
+                <div class="detail-group">
+                    <div class="detail-label">Time</div>
+                    <div class="detail-value" id="time">-</div>
+                </div>
+                <div class="detail-group">
+                    <div class="detail-label">Duration</div>
+                    <div class="detail-value" id="duration">-</div>
+                </div>
+                <div class="detail-group">
+                    <div class="detail-label">Price</div>
+                    <div class="detail-value" id="price">-</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Information Box -->
+        <div class="card">
+            <div class="card-title">Student Information</div>
+            <div class="details-grid">
+                <div class="detail-group">
+                    <div class="detail-label">Full Name</div>
+                    <div class="detail-value" id="studentName">-</div>
+                </div>
+                <div class="detail-group">
+                    <div class="detail-label">Email</div>
+                    <div class="detail-value" id="studentEmail">-</div>
+                </div>
+                <div class="detail-group">
+                    <div class="detail-label">Phone</div>
+                    <div class="detail-value" id="studentPhone">-</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions">
+            <button id="acceptBtn" class="btn-accept">✓ Accept</button>
+            <button id="rejectBtn" class="btn-reject">✕ Reject</button>
+
+        </div>
+    </div>
+
+    <!-- ACCEPT MODAL -->
+    <div id="acceptModal" class="modal">
+        <div class="modal-box">
+            <h2>Approve Session</h2>
+            <div class="meeting-link-section">
+                <label for="meetingLink">Meeting Link (Google Meet, Zoom, etc.)</label>
+                <input type="url" id="meetingLink" placeholder="https://meet.google.com/..." required>
+            </div>
+            <textarea id="acceptNotes" placeholder="Add custom notes for student (optional)"></textarea>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="confirmAccept()">Confirm</button>
+                <button class="btn-secondary" onclick="closeModal('acceptModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- REJECT MODAL -->
+    <div id="rejectModal" class="modal">
+        <div class="modal-box">
+            <h2>Reject Session</h2>
+            <textarea id="rejectReason" placeholder="Enter rejection reason"></textarea>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="confirmReject()">Confirm</button>
+                <button class="btn-secondary" onclick="closeModal('rejectModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Use type="module" to support ES6 imports for Firebase -->
+    <!-- Versioned script to avoid browser caching old JS -->
+    <script type="module" src="script.js?v=3"></script>
+</body>
+
+</html>

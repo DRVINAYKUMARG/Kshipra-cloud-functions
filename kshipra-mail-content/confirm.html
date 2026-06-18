@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Approval</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="title"></h1>
+
+    <div class="meeting-link-section" id="meetingLinkSection" style="display: none;">
+      <label for="meetingLink">Meeting Link (Google Meet, Zoom, etc.)</label>
+      <input type="url" id="meetingLink" placeholder="https://meet.google.com/..." />
+    </div>
+
+    <textarea id="inputField"></textarea>
+
+    <button id="confirmBtn">Confirm</button>
+
+    <div id="result" style="display:none"></div>
+  </div>
+
+  <!-- Versioned script to avoid browser caching old JS -->
+  <script type="module" src="script.js?v=3"></script>
+</body>
+
+</html>
